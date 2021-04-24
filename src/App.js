@@ -9,6 +9,8 @@ import {ElseServices} from "./components/ElseService";
 import {BreadCrumb} from "./components/BreadCrumb";
 import {DentalServicesPage} from "./pageComponent/DentalServicesPage";
 import {AboutUsPage} from "./pageComponent/AboutUsPage";
+import {FeedBackPage} from "./pageComponent/FeedBackPage";
+import {ContactPage} from "./pageComponent/ContactPage";
 
 
 class App extends React.Component{
@@ -22,6 +24,8 @@ class App extends React.Component{
             <Route path="/aboutus" render={()=><AboutUsPage/>} />
             <Route path="/dentalservice" render={()=><DentalServicesPage/>} />
             <Route path="/elseservice" render={()=><ElseServices/>} />
+            <Route path="/feedback" render={()=><FeedBackPage/>} />
+            <Route path="/contact" render={()=><ContactPage/>} />
             <Footer/>
         </BrowserRouter>
     )
