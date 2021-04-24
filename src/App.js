@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react";
+import {BrowserRouter, Route} from "react-router-dom"
+import {TopBar} from "./components/TopBar";
+import {Menu} from "./components/Menu";
+import {Footer} from "./components/Footer";
+import {Mainpage} from "./pageComponent/Mainpage";
+import {ElseServices} from "./components/ElseService";
+import {BreadCrumb} from "./components/BreadCrumb";
+import {DentalServicesPage} from "./pageComponent/DentalServicesPage";
+import {AboutUsPage} from "./pageComponent/AboutUsPage";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component{
+  render() {
+    return(
+        <BrowserRouter>
+            <TopBar/>
+            <Menu/>
+            <BreadCrumb/>
+            <Route exact path="/" render={()=><Mainpage/>} />
+            <Route path="/aboutus" render={()=><AboutUsPage/>} />
+            <Route path="/dentalservice" render={()=><DentalServicesPage/>} />
+            <Route path="/elseservice" render={()=><ElseServices/>} />
+            <Footer/>
+        </BrowserRouter>
+    )
+  }
 }
 
 export default App;
