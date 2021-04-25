@@ -16,6 +16,7 @@ import {ContactPage} from "./pageComponent/ContactPage";
 class App extends React.Component{
   render() {
     return(
+        <div>
         <BrowserRouter>
             <TopBar/>
             <Menu/>
@@ -28,7 +29,8 @@ class App extends React.Component{
             <Route path="/contact" render={()=><ContactPage/>} />
             <Footer/>
         </BrowserRouter>
-    )
+        </div>
+    );
   }
 }
 
