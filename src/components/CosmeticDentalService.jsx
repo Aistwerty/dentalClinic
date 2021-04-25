@@ -13,9 +13,10 @@ export class CosmeticDentalService extends React.Component{
                             Независимо от того насколько хорошо и качественно Вы чиститы зубы, какие бы щетки и зубные пасты не использовалии, со временем на зубах образуется налет и отложения зубного камня, которые портят Вашу улыбку и являются истониками кариеса.
                             Профессиональная чистка зубов AirFlow3d поможет избавится от налета и зубного камня, тем самым вернув природный цвет Вашей улыбки.
                         </p>
+                        <div className="text-center py-1"> <a href="" className="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Записаться на прием</a></div>
                     </div>
                     <div className="col-sm-4">
-                        <img src="../images/about-img.jpg" height="100%" width="100%" alt=""/>
+                        <img src="../images/about-img.jpg"  width="100%" alt=""/>
                     </div>
 
                 </div>

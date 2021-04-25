@@ -4,8 +4,12 @@ import {ClientsFeedback} from "../components/ClientsFeedback";
 import {AddFeedback} from "../components/AddFeedback";
 
 export class FeedBackPage extends React.Component{
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
+    }
+
+    componentDidMount() {
+        this.props.changeH1("Отзывы");
     }
 
     render() {

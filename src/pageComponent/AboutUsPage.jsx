@@ -5,6 +5,10 @@ export class AboutUsPage extends React.Component{
         super(props);
     }
 
+    componentDidMount() {
+        this.props.changeH1("О нас");
+    }
+
     render() {
         return(
             <div>

@@ -10,6 +10,10 @@ export class DentalServicesPage extends React.Component{
         super(props);
         }
 
+    componentDidMount() {
+        this.props.changeH1("Стоматологические услуги");
+    }
+
     render() {
         return(
             <div>

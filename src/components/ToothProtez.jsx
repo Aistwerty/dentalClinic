@@ -13,9 +13,10 @@ export class ToothProtez extends React.Component{
                             Наши специалисты на протяжении многих лет осуществляют успешное предоставление услуг протезирования и готовы подарить второй шанс Вашим сильно поврежденным зубам.
                             При общении к нашим специалистав Вам будет предложен выбор материала из которого будет сделана коронка, и подобран цвет, чтобы зуб с коронкой не отличался от всех остальных зубов.
                         </p>
+                        <div className="text-center py-1"> <a href="" className="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Записаться на прием</a></div>
                     </div>
                     <div className="col-sm-4">
-                        <img src="../images/s3.jpg" height="100%" width="100%" alt=""/>
+                        <img src="../images/s3.jpg"  width="100%" alt=""/>
                     </div>
 
                 </div>

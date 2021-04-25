@@ -6,7 +6,7 @@ export class CariesTreat extends React.Component{
             <div className="container py-5">
                 <div className="row">
                     <div className="col-sm-4">
-                        <img src="../images/s2.jpg" height="100%" width="100%" alt=""/>
+                        <img src="../images/s2.jpg"  width="100%" alt=""/>
                     </div>
                     <div className="col-sm-8">
                         <h5>Лечение кариеса</h5>
@@ -15,6 +15,7 @@ export class CariesTreat extends React.Component{
                             Как правило большинство людей обращаются за лечением, только когда зуб начинает болеть, что свидетельствует о последних стадиях и сильном поражении зуба.
                             Наши специалисты готовы оказать лечение на всех стадиях поражения зубы кариесом.
                         </p>
+                        <div className="text-center"> <a href="" className="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Записаться на прием</a></div>
                     </div>
                 </div>
             </div>

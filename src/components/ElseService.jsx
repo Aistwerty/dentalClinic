@@ -1,6 +1,14 @@
 import React from "react";
 
 export class ElseServices extends React.Component{
+    constructor(props) {
+        super(props);
+    }
+
+    componentDidMount() {
+        this.props.changeH1("Прочие услуги");
+    }
+
     render() {
         return(
             <div>

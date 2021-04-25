@@ -1,6 +1,57 @@
 import React from "react";
 
 export class ContactPage extends React.Component{
+    constructor(props) {
+        super(props);
+        this.inputCallback = this.inputCallback.bind(this);
+        this.sendCallBack = this.sendCallBack.bind(this);
+        this.state={
+            client:"",
+            email:"",
+            phone:"",
+            title:"",
+            message:""
+        }
+    }
+
+    inputCallback(event) {
+        const name = event.target.name;
+        const value = event.target.value;
+        this.setState({
+            [name]: value
+        })
+    }
+
+
+    sendCallBack(event){
+        event.preventDefault();
+        const formData = new FormData();
+        formData.append("client",this.state.client);
+        formData.append("email",this.state.email);
+        formData.append("phone",this.state.phone);
+        formData.append("title",this.state.title);
+        formData.append("message",this.state.message);
+        fetch("http://stomadent.aistwerty.beget.tech/php/sendCallback.php",{
+            method: 'POST',
+            body: formData
+        }).then(response=>response.json())
+            .then(result=> {
+                if (result.result === 'success') alert("Ваше сообщение успешно отправлено");
+                else alert("Отправка сообщения пока недоступно, попробуйте повторить попытку позже");
+                this.setState({
+                    client:"",
+                    email:"",
+                    phone:"",
+                    title:"",
+                    message:""
+                })
+            })
+    }
+
+    componentDidMount() {
+        this.props.changeH1("Контакты и обратная связь");
+    }
+
     render() {
         return(
             <div>
@@ -8,21 +59,21 @@ export class ContactPage extends React.Component{
                     <div className="container">
                         <div className="row d-flex align-items-stretch no-gutters">
                             <div className="col-md-6 p-4 p-md-5 order-md-last bg-light">
-                                <form action="#">
+                                <form onSubmit={this.sendCallBack}>
                                     <div className="form-group">
-                                        <input type="text" className="form-control" placeholder="Имя"/>
+                                        <input name="client" value={this.state.client} onChange={this.inputCallback} type="text" className="form-control" placeholder="Имя"/>
                                     </div>
                                     <div className="form-group">
-                                        <input type="mail" className="form-control" placeholder="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"/>
+                                        <input name="email" value={this.state.email} onChange={this.inputCallback} type="mail" className="form-control" placeholder="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"/>
                                     </div>
                                     <div className="form-group">
-                                        <input type="tel" className="form-control" placeholder="Номер телефона" pattern="[0-9-]$"/>
+                                        <input name="phone" value={this.state.phone} onChange={this.inputCallback} type="tel" className="form-control" placeholder="Номер телефона"/>
                                     </div>
                                     <div className="form-group">
-                                        <input type="text" className="form-control" placeholder="Тема сообщения"/>
+                                        <input name="title" value={this.state.title} onChange={this.inputCallback} type="text" className="form-control" placeholder="Тема сообщения"/>
                                     </div>
                                     <div className="form-group">
-                                        <textarea name="" id="" cols="30" rows="5" className="form-control" placeholder="Текст Вашего сообщения"/>
+                                        <textarea name="message" value={this.state.message} onChange={this.inputCallback} id="" cols="30" rows="5" className="form-control" placeholder="Текст Вашего сообщения"/>
                                     </div>
                                     <div className="form-group">
                                         <input type="submit" value="Отправить сообщение" className="btn btn-primary py-3 px-5"/>
@@ -45,7 +96,7 @@ export class ContactPage extends React.Component{
                             <div className="col-md-12 mb-4">
                                 <h2 className="h4">Контактная информация</h2>
                             </div>
-                            <div className="w-100"></div>
+                            <div className="w-100"/>
                             <div className="col-md-3 d-flex">
                                 <div className="bg-light d-flex align-self-stretch box p-4">
                                     <p><span>Адрес:</span> <br/> РФ, Пермский край, г.Чайковский,ул.Ленина, д.61/1, оф.30 (ДБ Элегант)</p>
