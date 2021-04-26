@@ -7,6 +7,9 @@ export class Mainpage extends React.Component{
         super(props);
     }
 
+    componentDidMount() {
+        this.props.changeH1("");
+    }
 
 
     render() {

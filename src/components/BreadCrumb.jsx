@@ -4,10 +4,11 @@ export class BreadCrumb extends React.Component{
     constructor(props) {
         super(props);
     }
+
     render() {
         return(
             <section className="hero-wrap hero-wrap-2" style={{backgroundImage: `url('images/bg_1.jpg')`}}
-                     data-stellar-background-ratio="0.5">
+                     data-stellar-background-ratio="0.5" id="banner">
                 <div className="overlay"/>
                 <div className="container">
                     <div className="row no-gutters slider-text align-items-center justify-content-center">

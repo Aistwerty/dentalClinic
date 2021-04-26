@@ -2,6 +2,7 @@ import React from "react";
 import {BrowserRouter} from "react-router-dom";
 import {ClientsFeedback} from "../components/ClientsFeedback";
 import {AddFeedback} from "../components/AddFeedback";
+import {ClientsFeedb} from "../components/ClientsFeedb";
 
 export class FeedBackPage extends React.Component{
     constructor(props) {
@@ -15,7 +16,7 @@ export class FeedBackPage extends React.Component{
     render() {
         return(
             <BrowserRouter>
-                <ClientsFeedback/>
+                <ClientsFeedb/>
                 <AddFeedback/>
             </BrowserRouter>
         )

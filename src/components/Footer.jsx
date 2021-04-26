@@ -67,10 +67,7 @@ export class Footer extends React.Component{
 
                             <p>
                                 Copyright &copy;
-                                <script>document.write(new Date().getFullYear());</script>
-                                All rights reserved | This template is made with <i className="icon-heart"
-                                                                                    aria-hidden="true"/> by <a
-                                    href="https://colorlib.com" target="_blank">Colorlib</a>
+                                2021. ООО "Стомадент" (Сайт выполнен Ступеньковым А.И. 26.04.2021)
                             </p>
                         </div>
                     </div>

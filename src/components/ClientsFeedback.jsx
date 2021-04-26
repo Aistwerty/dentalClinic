@@ -2,7 +2,7 @@ import React from "react";
 
 function ViewFeedback (props){
     return(
-        <div className="col-md-4 ftco">
+        <div class="col-md-4 ftco">
             <div className="blog-entry">
                 <div className="text bg-white p-4">
                     <p>{props.text}</p>
