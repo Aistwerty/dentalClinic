@@ -66,7 +66,7 @@ export class ClientsFeedb extends React.Component{
             }
         };
         return(
-            <div className="pt-4">
+            <div className="container pt-4">
                 <Carousel responsive={responsive}>
                     {this.state.feedback}
                 </Carousel>
