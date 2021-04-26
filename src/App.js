@@ -11,7 +11,6 @@ import {DentalServicesPage} from "./pageComponent/DentalServicesPage";
 import {AboutUsPage} from "./pageComponent/AboutUsPage";
 import {FeedBackPage} from "./pageComponent/FeedBackPage";
 import {ContactPage} from "./pageComponent/ContactPage";
-import {ModalWindow} from "./components/ModalWindow";
 
 
 class App extends React.Component{
@@ -42,7 +41,6 @@ class App extends React.Component{
             <Route path="/elseservice" render={()=><ElseServices changeH1={this.changeH1}/>} />
             <Route path="/feedback" render={()=><FeedBackPage changeH1={this.changeH1}/>} />
             <Route path="/contact" render={()=><ContactPage changeH1={this.changeH1}/>} />
-            <ModalWindow/>
             <Footer/>
         </BrowserRouter>
         </div>
