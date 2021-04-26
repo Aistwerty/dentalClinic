@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+Задачи проекта
+Создание веб-сайта для стоматологической клиники, адаптивного для различных устройств и приложений, с использованием HTML, CSS, React, jQuery по технологии SPA (Single Page Application).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Описание структуры и функциональной части
+Разработанный проект веб-сайта состоит из 6 страниц выполненных по технологии SPA.
 
-## Available Scripts
+Неизменяемая область сайта (header)
+ - отображает заголовок сайта и меню 
+- в заголовке содержится название компании, контактная информация, время работы
+- номера телефонов являются активными кнопками, позволяющими сразу перейти в смартфонах к вызову телефонного номера; 
 
-In the project directory, you can run:
+Неизменяемая область сайта (footer)
+- отображает карту сайта, контакты, информацию о юр.лице, время работы
+- номера телефонов являются активными кнопками, позволяющими сразу перейти в смартфонах к вызову телефонного номера; 
+- email является активной кнопкой, позволяющей сразу перейти к почтовому клиенту; 
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Страница 1. Главная. 
+- отображается рекламный баннер.
+Функциональные возможности:
+- отправка пользователем сайта заявки на обратный звонок с указанием имени, телефона, причины обращения;
+- уведомление в виде всплывающего окна, подтверждающее отправку заявки;
+- заявка направляется на почту клиники.
+ 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Страница 2. О нас
+Содержит обобщенную информацию о клинике и  лицензии. 
+ 
 
-### `npm test`
+Страница 3. Стоматологические услуги.
+Содержит описание оказываемых клиникой стоматологических услуг.
+Функциональные возможности:
+- реализована возможность отправки заявки для записи на прием с указанием: имени, фамилии, номера телефона, услуги, желаемой даты и времени.
+- заявка отправляется на почту клиники.
+- факт отправки заявки с сервера подтверждается всплывающим окном.
+  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Страница 4. Прочие услуги
+Содержит описание дополнительных услуг клиники.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Страница 5 Отзывы.
+Содержит отзывы клиентов и форму публикации отзывов клиентов-посетителей веб-сайта.
+Функциональные возможности:
+- отображение отзывов осуществляется с помощью дополнительного компонента React Carusell;
+- отзывы загружаются из базы данных на хостинге;
+- публикация отзывов осуществляется через форму и отправляются в базу данных;
+ 
+ 
+Страница 6. Контакты.
+Содержит в себе контактную информацию клиники, встроенную Яндекс карту с указанием на ней места нахождения клиники и форму обратной связи.
+ Функциональные возможности:
+- встроенная Яндекс.карта позволяет изменить масштаб
+- обращения направленные через форму поступают на почту клиники
+- номера телефонов являются активными кнопками, позволяющими сразу перейти в смартфонах к вызову телефонного номера; 
+- email является активной кнопкой, позволяющей сразу перейти к почтовому клиенту; 
+- иконки социальных сетей являются активными ссылками для перехода на страницы соответствующих социальных сетей.
+  
+Выполненный проект веб-сайта стоматологической клиники является законченным проектом. 
+Дальнейшее развитие данного проекта возможно, в частности:
+- подключение к сайту whatsapp и telegram; 
+- cоздание личного кабинета администратора для контроля за отправляемыми отзывами, удаление нежелательных отзывов и получения контактов для работы с клиентами опубликовавшими негативные отзывы;   
+- добавление/ изменение контента; 
+- добавление новых страниц на веб-сайте. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
